@@ -66,4 +66,8 @@ arrows = pitch.arrows(1.2*passBetween.x, .8*passBetween.y, 1.2*passBetween.x_end
 
 nodes = pitch.scatter(1.2*averageLocations.x, .8*averageLocations.y, s = 300, color = '#d3d3d3', edgecolors = 'black', linewidth = 2.5, alpha = 1, zorder = 1, ax=ax)
 
+for passer, row in averageLocations.iterrows():
+    ax.annotate(str(passer), (1.2*row['x'], .8*row['y']),
+                color = 'black', ha = 'center', va = 'center', size = 10, weight = 'bold')
+
 plt.show()
