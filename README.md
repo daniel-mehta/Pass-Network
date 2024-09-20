@@ -4,10 +4,16 @@ This project generates a pass network for Barcelona's match against Valladolid i
 
 ### Overview:
 - Visualizes successful passes made by Barcelona before the first substitution.
+- Node sizes now represent player influence, with larger nodes indicating higher involvement in passes (either as the passer or the recipient).
 - Nodes represent players, and arrows represent passes between them.
 
 ### Example Visualization:
-![PassNetwork](https://github.com/user-attachments/assets/046d81cc-c1f4-4b1f-82c9-b4d39ee24a9d)
+![Figure_1](https://github.com/user-attachments/assets/816f1ec1-0ef4-4e9b-aab7-2815ae0bc1d5)
+
+### Features:
+- **Player Influence**: Nodes are sized proportionally to the number of passes a player was involved in, helping highlight key players in the team's passing network.
+- **Pass Network**: Displays connections between players based on passes exchanged during the match.
+- **Substitution Cutoff**: The visualization only includes passes made before Barcelona’s first substitution to focus on the pre-substitution phase of play.
 
 
 ### Credits:
