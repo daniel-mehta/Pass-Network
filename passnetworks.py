@@ -64,7 +64,14 @@ arrows = pitch.arrows(1.2*passBetween.x, .8*passBetween.y, 1.2*passBetween.x_end
 
 #plt.show()
 
-nodes = pitch.scatter(1.2*averageLocations.x, .8*averageLocations.y, s = 300, color = '#d3d3d3', edgecolors = 'black', linewidth = 2.5, alpha = 1, zorder = 1, ax=ax)
+# Scale node sizes by the number of passes (involvement)
+node_size = averageLocations['count'] * 30  # Adjust the multiplier for desired node size scaling
+
+# Plot the player nodes with size proportional to pass involvement
+nodes = pitch.scatter(1.2*averageLocations.x, .8*averageLocations.y, 
+                      s=node_size, color='#d3d3d3', edgecolors='black', 
+                      linewidth=2.5, alpha=1, zorder=1, ax=ax)
+
 
 for passer, row in averageLocations.iterrows():
     ax.annotate(str(passer), (1.2*row['x'], .8*row['y']),
